@@ -2,7 +2,7 @@
 
 The goal of this excercise is to build a simple version of a review display widget commonly found on merchant product display pages.
 
-The widget will primarily fetch and render a list of reviews. It will also support client side sorting of reviews based on attributes, and helpul voting. The widget must be implemented using React but you are free to use any other dependencies.
+The widget will primarily fetch and render a list of reviews. It will also support client side sorting of reviews based on attributes, and helpul voting. The widget must be implemented using [React](https://reactjs.org/), but you are free to use any other dependencies.
 
 The starter project was bootstrapped with [create-react-app](https://github.com/facebook/create-react-app), it includes a webservice that returns review data, as well as some helpful components.
 
