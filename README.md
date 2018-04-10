@@ -1,10 +1,16 @@
 # Review Display
 
-The goal of this excercise is to build a simple version of a review display widget commonly found on merchant product display pages.
+The goal of this excercise is to build a simple version of a review display widget commonly found on retailer product detail pages.
 
-The widget will primarily fetch and render a list of reviews. It will also support client side sorting of reviews based on attributes, and helpul voting. The widget must be implemented using [React](https://reactjs.org/), but you are free to use any other dependencies.
+The widget will primarily fetch and render a list of reviews. It will allow users to sort reviews, and vote for helpful or unhelpful reviews. The widget must be implemented using [React](https://reactjs.org/), but you are free to use any other dependencies.
 
-The starter project was bootstrapped with [create-react-app](https://github.com/facebook/create-react-app), it includes a webservice that returns review data, as well as some helpful components.
+The starter project was bootstrapped with [create-react-app](https://github.com/facebook/create-react-app), usage details can be found [here](CREATE_REACT_APP_README.md). The starter project includes a webservice that returns review data, as well as some helpful components.
+
+## Notes
+
+* While we've given you a week to complete this project, we estimate that you will not need more than 8 hours of work to achieve all of the requirements.
+* Perfect is the enemy of good. Don't try too hard to impress us, you can always leave notes detailing improvements/extensions.
+* We appreciate your time commitment and we promise to provide feedback on your submission.
 
 ## Required functionality
 
@@ -27,30 +33,22 @@ Support client side sorting by
 * Highest Rated
 * Oldest
 
-### Badging
+### Reviewer Badges
 
-Badges relay information about the review author. Badges should be prioritized in the following order:
+Badges relay authenticity information about the review author. For example a review by verified buyer will likely be given stronger consideration than a review with no badging. Badges should be prioritized in the following order:
 
 * Staff Reviewer
 * Verified Buyer
 * Verified Reviewer
 
-Badges icons can be found in [src/icons](src/icons).
+Badges icons can be found in [src/icons/badges](src/icons/badges.js).
 
 ### Helpful voting
 
-Voting should be captured and confirmed on the client side. A user may only cast one vote per review. Votes do not need to persist through page reloads.
+Users can indicate if a review was helpful or not. Voting should be captured and confirmed on the client side. A user may only cast one vote per review. There is no service endpoint to capture votes. Votes do not need to persist through page reloads.
 
 <details>
 <summary>View Mockup</summary>
 <img src="mockups/voting.gif" style="padding:20px 10px 10px;background-color:white;box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24);"/>
 </video>
 </details>
-
-## Extra Credit
-
-These are not necessary but are relevant to the work done by the frontend team.
-
-* Use a functional CSS framework e.g. [tachyons](https://tachyons.io/) or [tailwind](https://tailwindcss.com/)
-* Responsive review display, see:[mockups/review-display-mobile.png](mockups/review-display-mobile.png)
-* Write Integration tests using [cypress.io](https://www.cypress.io/)
