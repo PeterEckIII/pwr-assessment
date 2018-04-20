@@ -77,7 +77,7 @@ Support client side sorting by
 
 ### Reviewer Badges
 
-Badges relay authenticity information about the review author. For example a review by verified buyer will likely be given stronger consideration than a review with no badging. Badges should be prioritized in the following order:
+Badges relay authenticity information about the review author. For example a review by verified buyer will likely be given stronger consideration than a review with no badging. Only render one badge for a review, the badge to be displayed should be determined using the following order:
 
 * Staff Reviewer
 * Verified Buyer

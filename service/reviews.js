@@ -40,8 +40,8 @@ module.exports = exports = {
       },
       media: [],
       metrics: {
-        helpful_votes: 0,
-        not_helpful_votes: 0,
+        helpful_votes: 10,
+        not_helpful_votes: 4,
         rating: 5,
         helpful_score: 1463
       }
@@ -65,8 +65,8 @@ module.exports = exports = {
       },
       media: [],
       metrics: {
-        helpful_votes: 0,
-        not_helpful_votes: 0,
+        helpful_votes: 1,
+        not_helpful_votes: 3,
         rating: 3,
         helpful_score: 1073
       }
@@ -91,8 +91,8 @@ module.exports = exports = {
       },
       media: [],
       metrics: {
-        helpful_votes: 0,
-        not_helpful_votes: 0,
+        helpful_votes: 10,
+        not_helpful_votes: 10,
         rating: 2,
         helpful_score: 1833
       }
@@ -117,8 +117,8 @@ module.exports = exports = {
       },
       media: [],
       metrics: {
-        helpful_votes: 0,
-        not_helpful_votes: 0,
+        helpful_votes: 20,
+        not_helpful_votes: 2,
         rating: 5,
         helpful_score: 1475
       }
@@ -142,8 +142,8 @@ module.exports = exports = {
       },
       media: [],
       metrics: {
-        helpful_votes: 0,
-        not_helpful_votes: 0,
+        helpful_votes: 1,
+        not_helpful_votes: 1,
         rating: 4,
         helpful_score: 1107
       }
