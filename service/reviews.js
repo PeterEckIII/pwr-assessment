@@ -30,7 +30,7 @@ module.exports = exports = {
         nickname: "Kenneth",
         properties: [],
         location: "Chicago, IL",
-        created_date: 1522547757171,
+        created_date: 1543868333000,
         product_page_id: "633298"
       },
       badges: {
@@ -55,7 +55,7 @@ module.exports = exports = {
         nickname: "Jessica",
         properties: [],
         location: "undisclosed",
-        created_date: 1522414649981,
+        created_date: 1543735225810,
         product_page_id: "633298"
       },
       badges: {
@@ -76,12 +76,12 @@ module.exports = exports = {
       internal_review_id: 143146950,
       details: {
         comments:
-          "We bought this helium tank with the intention of inflating around 20, 12 inch latex balloons. This tank ran out after 10. We had to go rent a helium tank from a local party supply on the day of our party (which we should have done anyways - it was cheaper and had way more helium.) If you have the option, I would suggest that instead of buying this tank, you rent a helium tank. At least that way you know how much you're getting. This definitely did not finish the job. That being said, it was lightweight and easy to use, so 2 stars for that.",
+          "We bought this helium tank with the intention of inflating around 20, 12 inch latex balloons. This tank ran out after 10. We had to go renta helium tank from a local party supply on the day of our party (which we should have done anyways - it was cheaper and had way more helium.)If you have the option, I would suggest that instead of buying this tank, you rent a helium tank. At least that way you know how much you'regetting. This definitely did not finish the job. That being said, it was lightweight and easy to use, so 2 stars for that.",
         headline: "Easy to Use, But Not as Advertised",
         nickname: "LI",
         properties: [],
         location: "undisclosed",
-        created_date: 1522369386029,
+        created_date: 1543689961858,
         product_page_id: "633298"
       },
       badges: {
@@ -107,7 +107,7 @@ module.exports = exports = {
         nickname: "Theresa",
         properties: [],
         location: "undisclosed",
-        created_date: 1522328944470,
+        created_date: 1543649520299,
         product_page_id: "633298"
       },
       badges: {
@@ -132,7 +132,7 @@ module.exports = exports = {
         nickname: "SHERIE",
         properties: [],
         location: "undisclosed",
-        created_date: 1522275076937,
+        created_date: 1543595652766,
         product_page_id: "633298"
       },
       badges: {
@@ -157,7 +157,7 @@ module.exports = exports = {
         nickname: "Bethania",
         properties: [],
         location: "undisclosed",
-        created_date: 1522196369783,
+        created_date: 1543516945612,
         product_page_id: "633298"
       },
       badges: {
@@ -182,7 +182,7 @@ module.exports = exports = {
         nickname: "Diana",
         properties: [],
         location: "undisclosed",
-        created_date: 1520916389829,
+        created_date: 1542236965658,
         product_page_id: "633298"
       },
       badges: {
@@ -207,7 +207,7 @@ module.exports = exports = {
         nickname: "Jess",
         properties: [],
         location: "undisclosed",
-        created_date: 1520893190769,
+        created_date: 1542213766598,
         product_page_id: "633298"
       },
       badges: {
@@ -232,7 +232,7 @@ module.exports = exports = {
         nickname: "Rebecca",
         properties: [],
         location: "undisclosed",
-        created_date: 1520646755694,
+        created_date: 1541967331523,
         product_page_id: "633298"
       },
       badges: {
@@ -258,7 +258,7 @@ module.exports = exports = {
         nickname: "Patricia",
         properties: [],
         location: "undisclosed",
-        created_date: 1520553859505,
+        created_date: 1541874435334,
         product_page_id: "633298"
       },
       badges: {
