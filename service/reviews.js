@@ -1,4 +1,14 @@
-module.exports = exports = {
+// generate a random date within the
+const randomDate = (() => {
+  var end = new Date().getTime();
+  var start = end - 3 * 30 * 60 * 60 * 24 * 1000;
+
+  return () => {
+    return new Date(start + Math.random() * (end - start)).getTime();
+  };
+})();
+
+const data = {
   page_id: "633298",
   rollup: {
     properties: [],
@@ -30,7 +40,7 @@ module.exports = exports = {
         nickname: "Kenneth",
         properties: [],
         location: "Chicago, IL",
-        created_date: 1543868333000,
+        created_date: randomDate(),
         product_page_id: "633298"
       },
       badges: {
@@ -55,7 +65,7 @@ module.exports = exports = {
         nickname: "Jessica",
         properties: [],
         location: "undisclosed",
-        created_date: 1543735225810,
+        created_date: randomDate(),
         product_page_id: "633298"
       },
       badges: {
@@ -81,7 +91,7 @@ module.exports = exports = {
         nickname: "LI",
         properties: [],
         location: "undisclosed",
-        created_date: 1543689961858,
+        created_date: randomDate(),
         product_page_id: "633298"
       },
       badges: {
@@ -107,7 +117,7 @@ module.exports = exports = {
         nickname: "Theresa",
         properties: [],
         location: "undisclosed",
-        created_date: 1543649520299,
+        created_date: randomDate(),
         product_page_id: "633298"
       },
       badges: {
@@ -132,7 +142,7 @@ module.exports = exports = {
         nickname: "SHERIE",
         properties: [],
         location: "undisclosed",
-        created_date: 1543595652766,
+        created_date: randomDate(),
         product_page_id: "633298"
       },
       badges: {
@@ -157,7 +167,7 @@ module.exports = exports = {
         nickname: "Bethania",
         properties: [],
         location: "undisclosed",
-        created_date: 1543516945612,
+        created_date: randomDate(),
         product_page_id: "633298"
       },
       badges: {
@@ -182,7 +192,7 @@ module.exports = exports = {
         nickname: "Diana",
         properties: [],
         location: "undisclosed",
-        created_date: 1542236965658,
+        created_date: randomDate(),
         product_page_id: "633298"
       },
       badges: {
@@ -207,7 +217,7 @@ module.exports = exports = {
         nickname: "Jess",
         properties: [],
         location: "undisclosed",
-        created_date: 1542213766598,
+        created_date: randomDate(),
         product_page_id: "633298"
       },
       badges: {
@@ -232,7 +242,7 @@ module.exports = exports = {
         nickname: "Rebecca",
         properties: [],
         location: "undisclosed",
-        created_date: 1541967331523,
+        created_date: randomDate(),
         product_page_id: "633298"
       },
       badges: {
@@ -258,7 +268,7 @@ module.exports = exports = {
         nickname: "Patricia",
         properties: [],
         location: "undisclosed",
-        created_date: 1541874435334,
+        created_date: randomDate(),
         product_page_id: "633298"
       },
       badges: {
@@ -276,3 +286,5 @@ module.exports = exports = {
     }
   ]
 };
+
+module.exports = exports = data;
