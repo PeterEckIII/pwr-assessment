@@ -1,14 +1,15 @@
 {
   "name": "frontend-recruiting-take-home",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "proxy": "http://localhost:5000",
   "private": true,
   "dependencies": {
     "concurrently": "^4.1.0",
+    "date-fns": "^1.30.1",
     "prop-types": "^15.6.1",
     "react": "^16.8.5",
     "react-dom": "^16.8.5",
-    "react-scripts": "2.1.8"
+    "react-scripts": "^3.0.1"
   },
   "scripts": {
     "start": "yarn concurrently \"yarn run app\" \"yarn run service\"",
