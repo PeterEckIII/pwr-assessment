@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 export const VerifiedBuyer = props => (
   <svg viewBox="0 0 500 500" {...props}>

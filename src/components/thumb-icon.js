@@ -1,6 +1,6 @@
-import * as React from "react";
+import React from "react";
 
-export function Thumb(props) {
+export function ThumbIcon(props) {
   return (
     <svg x="0px" y="0px" viewBox="0 0 216 146" {...props}>
       <g>
