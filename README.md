@@ -6,11 +6,9 @@ The widget will primarily fetch and render a list of reviews. It will allow user
 
 The starter project was bootstrapped with [create-react-app](https://github.com/facebook/create-react-app), usage details can be found [here](CREATE_REACT_APP_README.md). The starter project includes a web service that returns review data, as well as some useful components.
 
-<video height="300">
-<source src="https://res.cloudinary.com/powerreviews/video/upload/v1561066786/take-home-challenge_uy31zs.mp4" type="video/mp4" controls/>
-Your browser does not support the video tag.
-Visit <a href="https://res.cloudinary.com/powerreviews/video/upload/v1561066786/take-home-challenge_uy31zs.mp4">https://res.cloudinary.com/powerreviews/video/upload/v1561066786/take-home-challenge_uy31zs.mp4</a> to watch video
-</video>
+## Demo
+
+See [demo.mp4](demo.mp4) or https://media.powerreviews.com/video/upload/v1561066786/take-home-challenge_uy31zs.mp4
 
 ## Requirements
 
@@ -82,12 +80,7 @@ This project includes a web service `/reviews` that returns a list of reviews.
 
 Use the data returned by the service to render a list of reviews similar to the attached mockup. Each review container should have a `data-id` attribute set to the `review_id` property.
 
-Use the star rating icon in [src/star-rating]
-
-<details>
-<summary>View Mockup</summary>
-<img src="mockups/review-display.png" />
-</details>
+Use the star rating icon in [src/components/star-rating.js](src/components/star-rating.js).
 
 ### Sorting
 
@@ -109,14 +102,8 @@ A review should include most one badge, if multiple badges are available use the
 - Verified Buyer
 - Verified Reviewer
 
-Badges icons can be found in [src/icons/badges](src/icons/badges.js).
+Badges icons can be found in [src/components/badge-icons.js](src/components/badge-icons.js).
 
 ### Helpful voting
 
 Users can indicate if a review was helpful or not. Voting should be captured and confirmed on the client side. A user may only cast one vote per review. There is no service endpoint to capture votes.
-
-<details>
-<summary>View Mockup</summary>
-<img src="mockups/voting.gif" style="padding:20px 10px 10px;background-color:white;box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24);"/>
-</video>
-</details>
