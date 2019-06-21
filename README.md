@@ -1,15 +1,21 @@
 # Review Display
 
-The goal of this excercise is to build a simple version of a review display widget commonly found on retailer product detail pages.
+The goal of this exercise is to build a simple version of a review display widget commonly found on retailer product detail pages.
 
-The widget will primarily fetch and render a list of reviews. It will allow users to sort reviews, and vote for helpful or unhelpful reviews. The widget must be implemented using [React](https://reactjs.org/), but you are free to use any other dependencies.
+The widget will primarily fetch and render a list of reviews. It will allow users to sort reviews and vote for helpful or unhelpful reviews. The widget must be implemented using [React](https://reactjs.org/), but you are free to use almost\* any dependencies.
 
-The starter project was bootstrapped with [create-react-app](https://github.com/facebook/create-react-app), usage details can be found [here](CREATE_REACT_APP_README.md). The starter project includes a webservice that returns review data, as well as some helpful components.
+The starter project was bootstrapped with [create-react-app](https://github.com/facebook/create-react-app), usage details can be found [here](CREATE_REACT_APP_README.md). The starter project includes a web service that returns review data, as well as some useful components.
+
+<video height="300">
+<source src="https://res.cloudinary.com/powerreviews/video/upload/v1561066786/take-home-challenge_uy31zs.mp4" type="video/mp4" controls/>
+Your browser does not support the video tag.
+Visit <a href="https://res.cloudinary.com/powerreviews/video/upload/v1561066786/take-home-challenge_uy31zs.mp4">https://res.cloudinary.com/powerreviews/video/upload/v1561066786/take-home-challenge_uy31zs.mp4</a> to watch video
+</video>
 
 ## Requirements
 
-* Node JS >= 4 https://nodejs.org/en/
-* Yarn >= 1 https://yarnpkg.com/en/
+- Node JS >= 4 https://nodejs.org/en/
+- Yarn >= 1 https://yarnpkg.com/en/
 
 ## Usage
 
@@ -19,7 +25,7 @@ Run `yarn` inside the project to install all dependencies.
 yarn
 ```
 
-Additional dependencies can be added by running:
+Add additional dependencies by running:
 
 ```
 yarn add ${pkg-name}
@@ -35,7 +41,7 @@ yarn add ${pkg-name}
 
 ## Submitting your solution
 
-* Change the `name` field in the `package.json` to `${first-name}-${lastname}`. For example, if your name is Jane Doe your package.json will look like following:
+- Change the `name` field in the `package.json` to `${first-name}-${lastname}`. For example, if your name is Jane Doe your package.json will look like the following:
 
 ```js
 {
@@ -44,21 +50,39 @@ yarn add ${pkg-name}
 }
 ```
 
-* Run `yarn pack` inside the package, the will generate a zipped tarball. This tarball is the file you will be submitting. In the case of the example above, the file generated will be `jane-doe-v1.0.0.tgz`.
+- Run `yarn pack` inside the package to generate a zipped tarball. This tarball is the file you will be submitting. In the case of the example above, the file generated will be `jane-doe-v1.0.0.tgz`.
 
-To evaluate your solution we will unzip the tarball and then run `yarn start` inside the folder.
+To evaluate your solution, we will unzip the tarball and then run `yarn && yarn start` inside the folder.
 
 ## Notes
 
-* While we've given you a week to complete this project, we estimate that you will not need more than 8 hours of work to achieve all of the requirements.
-* Perfect is the enemy of good. Don't try too hard to impress us, you can always leave notes detailing improvements/extensions.
-* We appreciate your time commitment and we promise to provide feedback on your submission.
+- While we've given you a week to complete this project, we estimate that you will not need more than 8 hours of work to achieve all of the requirements.
+- Examine the provided assets; they are essential for the successful completion of this project.
+- Perfect is the enemy of good. Don't try too hard to impress us; you can always leave notes detailing improvements/extensions.
+- We appreciate your time commitment, and we promise to provide feedback on your submission.
+
+### Restricted Dependencies
+
+The following class of dependencies is **restricted** because, they are unnecessary given the size of the project, or circumvent proficiencies we hope to assess.
+
+| Type                         | Examples                                    |
+| ---------------------------- | ------------------------------------------- |
+| State Management             | Redux, Unstated, Mobx, etc.                 |
+| CSS-in-JS                    | Styled-components, emotion, styletron, etc. |
+| UI Toolkits                  | react-bootstrap, react-material-ui, etc.    |
+| JavaScript Utility libraries | Lodash, Underscore, etc.                    |
 
 ## Required functionality
+
+### Fetch review data
+
+This project includes a web service `/reviews` that returns a list of reviews.
 
 ### Review Listing
 
 Use the data returned by the service to render a list of reviews similar to the attached mockup. Each review container should have a `data-id` attribute set to the `review_id` property.
+
+Use the star rating icon in [src/star-rating]
 
 <details>
 <summary>View Mockup</summary>
@@ -67,27 +91,29 @@ Use the data returned by the service to render a list of reviews similar to the 
 
 ### Sorting
 
-Support client side sorting by
+Support client-side sorting by
 
-* Most Recent (default)
-* Most Helpful (based on `helpful_score`)
-* Lowest Rated
-* Highest Rated
-* Oldest
+- Most Recent (default)
+- Most Helpful (based on `helpful_score`)
+- Lowest Rated
+- Highest Rated
+- Oldest
 
 ### Reviewer Badges
 
-Badges relay authenticity information about the review author. For example a review by verified buyer will likely be given stronger consideration than a review with no badging. Only render one badge for a review, the badge to be displayed should be determined using the following order:
+Badges relay authenticity information about the review author; for example, a review by a verified buyer will likely be given stronger consideration than a review with no badging.
 
-* Staff Reviewer
-* Verified Buyer
-* Verified Reviewer
+A review should include most one badge, if multiple badges are available use the following order to determine what to render.
+
+- Staff Reviewer
+- Verified Buyer
+- Verified Reviewer
 
 Badges icons can be found in [src/icons/badges](src/icons/badges.js).
 
 ### Helpful voting
 
-Users can indicate if a review was helpful or not. Voting should be captured and confirmed on the client side. A user may only cast one vote per review. There is no service endpoint to capture votes. Votes do not need to persist through page reloads.
+Users can indicate if a review was helpful or not. Voting should be captured and confirmed on the client side. A user may only cast one vote per review. There is no service endpoint to capture votes.
 
 <details>
 <summary>View Mockup</summary>
