@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const ACTIVE_COLOR = "#f59331";
 const INACTIVE_COLOR = "#ddd";
 
-export class StarRating extends React.PureComponent {
+export default class StarRating extends React.PureComponent {
   static propTypes = {
     rating: PropTypes.number.isRequired
   };
