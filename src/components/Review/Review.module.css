@@ -1,0 +1,24 @@
+.container {
+    padding: 10px 10px;
+}
+
+.review_headline {
+    font-size: 1.2rem;
+}
+
+.review_comment {
+    float: left;
+    color: black;
+    font-size: .9rem;
+    padding: 10px;
+}
+
+.star_rating {
+    display: inline-block;
+    height: 20px;
+    width: 100px;
+}
+
+.information {
+    float: right;
+}
