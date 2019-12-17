@@ -1,0 +1,7 @@
+.review_comment {
+  float: left;
+  color: black;
+  font-size: 0.9rem;
+  padding: 10px;
+  word-wrap: break-word;
+}
