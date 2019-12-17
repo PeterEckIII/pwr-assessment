@@ -1,0 +1,9 @@
+.review_headline {
+  font-size: 1.2rem;
+}
+
+.star_rating {
+  display: inline-block;
+  height: 20px;
+  width: 100px;
+}
