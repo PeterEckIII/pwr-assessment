@@ -3,7 +3,7 @@ import styles from './ReviewHeader.module.css'
 import StarRating from '../../star-rating';
 
 const ReviewHeader = ({ rating, headline }) => (
-    <header>
+    <header className={styles.container}>
         <div className={ styles.star_rating }>
             <StarRating
                 rating={ rating }
