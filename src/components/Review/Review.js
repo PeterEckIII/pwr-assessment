@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './Review.module.css';
 import ReviewHeader from './ReviewHeader/ReviewHeader';
-import ReviewAside from './ReviewAside/ReviewAside';
-import ReviewSection from './ReviewSection/ReviewSection';
+import ReviewInformation from './ReviewInformation/ReviewInformation';
+import ReviewComment from './ReviewComment/ReviewComment';
 import ReviewFooter from './ReviewFooter/ReviewFooter';
 
 const Review = ({ review }) => (
@@ -11,10 +11,10 @@ const Review = ({ review }) => (
             rating={ review.metrics.rating }
             headline={ review.details.headline }
         />
-        <ReviewSection
+        <ReviewComment
             comment={ review.details.comments }
         />
-        <ReviewAside
+        <ReviewInformation
             location={ review.details.location }
             nickname={ review.details.nickname }
             created={ review.details.created_date }
