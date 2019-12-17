@@ -1,3 +1,7 @@
+.section {
+  grid-area: content;
+}
+
 .review_comment {
   float: left;
   color: black;
