@@ -8,7 +8,7 @@ const ReviewList = ({ reviews }) => {
             <div className={styles.title}>
                 <span>Review Display</span>
             </div>
-            <ul>
+            <ul className={styles.list}>
                 { reviews.map(review => {
                     return (
                         <Review 

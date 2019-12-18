@@ -1,8 +1,9 @@
 .container {
+  margin: 10px 10px;
   display: grid;
-  grid-gap: 5px;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: 
   "header header header"
   "content content aside"
-  "footer footer footer"
+  "footer footer footer";
 }

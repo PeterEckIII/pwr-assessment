@@ -3,6 +3,7 @@
 }
 
 .review_comment {
+  width: 85%;
   float: left;
   color: black;
   font-size: 0.9rem;
