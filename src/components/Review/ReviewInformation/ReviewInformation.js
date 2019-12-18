@@ -5,17 +5,17 @@ import { relativeTime } from '../../../relative-time';
 const ReviewInformation = ({ location, nickname, created_date }) => (
     <aside className={ styles.information }>
         <div>
-            <span>Submitted: { relativeTime(created_date) }</span>
+            <span><strong>Submitted: </strong>{ relativeTime(created_date) }</span>
         </div>
 
         <div>
-            <span>By:  </span>
+            <span><strong>By:  </strong></span>
             <span>
                 { nickname }
             </span>
         </div>
         <div>
-            <span>From:  </span>
+            <span><strong>From:  </strong></span>
             <span>
                 { location }
             </span>
