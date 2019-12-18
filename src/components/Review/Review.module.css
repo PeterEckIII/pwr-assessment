@@ -6,4 +6,7 @@
   "header header header"
   "content content aside"
   "footer footer footer";
+  border-top: 1px solid lightgray;
+  padding: 10px 10px;
+  line-height: 1.5rem;
 }
