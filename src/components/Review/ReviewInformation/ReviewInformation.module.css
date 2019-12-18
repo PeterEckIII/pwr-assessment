@@ -2,3 +2,7 @@
   grid-area: aside;
   float: right;
 }
+
+.information {
+  font-size: 0.9rem;
+}
