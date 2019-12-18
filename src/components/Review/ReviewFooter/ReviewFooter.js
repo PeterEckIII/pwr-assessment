@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './ReviewFooter.module.css';
 
 const ReviewFooter = () => (
-    <footer class={styles.footer}>
+    <footer className={styles.footer}>
         <div>Was this helpful (thumb up / down)</div>
     </footer>
 );
