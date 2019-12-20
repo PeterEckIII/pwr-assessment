@@ -18,6 +18,7 @@ const Review = ({ review }) => (
             location={ review.details.location }
             nickname={ review.details.nickname }
             created={ review.details.created_date }
+            badges={review.badges}
         />
         <ReviewFooter />
     </article>

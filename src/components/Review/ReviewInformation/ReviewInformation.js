@@ -1,8 +1,9 @@
 import React from 'react';
 import styles from './ReviewInformation.module.css';
 import { relativeTime } from '../../../relative-time';
+import * as Badges from '../../badge-icons';
 
-const ReviewInformation = ({ location, nickname, created_date }) => (
+const ReviewInformation = ({ location, nickname, created_date, badges }) => (
     <aside className={ styles.information }>
         <div>
             <span><strong>Submitted: </strong>{ relativeTime(created_date) }</span>
