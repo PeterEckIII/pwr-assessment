@@ -20,7 +20,10 @@ const Review = ({ review }) => (
             created={ review.details.created_date }
             badges={review.badges}
         />
-        <ReviewFooter />
+        <ReviewFooter
+            helpful={review.metrics.helpful_votes}
+            notHelpful={review.metrics.not_helpful_votes}
+        />
     </article>
 )
 
