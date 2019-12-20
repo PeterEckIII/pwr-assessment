@@ -4,11 +4,11 @@ import StarRating from '../../star-rating';
 
 const ReviewHeader = ({ rating, headline }) => (
     <header className={styles.container}>
-        <div className={ styles.star_rating }>
+        <span className={ styles.star_rating }>
             <StarRating
                 rating={ rating }
             />
-        </div>
+        </span><span className={styles.rating_indicator}>{rating}</span>
         <div className={ styles.review_headline }>
             <strong>{ headline }</strong>
         </div>
