@@ -5,7 +5,7 @@ import { ThumbIcon } from '../../thumb-icon';
 const ReviewFooter = ({ helpful, notHelpful }) => (
     <footer className={styles.footer}>
         <div className={styles.helpfulText}><strong>Was this review helpful to you?</strong></div>
-        <div className={styles.helpfulVotes}>
+        <div className={styles.votes}>
             <div className={styles.upThumbIcon}>
                 <ThumbIcon />
                 <span className={helpful}>{helpful}</span>
