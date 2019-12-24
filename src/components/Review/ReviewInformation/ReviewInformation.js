@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './ReviewInformation.module.css';
 import { relativeTime } from '../../../relative-time';
-import * as Badges from '../../badge-icons';
+import ReviewBadge from '../ReviewBadge/ReviewBadge';
+import classes from './ReviewInformation.module.css';
 
 const ReviewInformation = ({ location, nickname, created_date, badges }) => (
     <aside className={ styles.information }>
@@ -21,6 +22,7 @@ const ReviewInformation = ({ location, nickname, created_date, badges }) => (
                 { location }
             </span>
         </div>
+        <ReviewBadge badges={ badges } />
     </aside>
 )
 
