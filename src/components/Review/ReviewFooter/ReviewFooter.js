@@ -7,8 +7,8 @@ const ReviewFooter = ({ helpful, notHelpful }) => (
         <div className={styles.helpfulText}><strong>Was this review helpful to you?</strong></div>
         <div className={styles.votes}>
             <div className={styles.upThumbIcon}>
-                <ThumbIcon />
-                <span className={helpful}>{helpful}</span>
+                <ThumbIcon className={styles.thumbs} />
+                <span className={styles.helpful}>{helpful}</span>
             </div>
             <div className={styles.downThumbIcon}>
                 <ThumbIcon />
