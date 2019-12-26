@@ -1,5 +1,11 @@
 .badgeElement {
+  display: inline-block;
+  vertical-align: middle;
   height: 18px;
   width: 18px;
   font-size: 0.85rem;
+}
+
+.badgeText {
+  padding-left: 5px;
 }
