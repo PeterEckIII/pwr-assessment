@@ -2,15 +2,16 @@
     grid-area: footer;
 }
 
-.upThumbIcon {
-    border: 1px solid lightgray;
-    height: 15px;
-    width: 25px;
-    padding: 5px 5px;
-    margin: 5px 5px;
+.iconContainer {
+    display: inline-block;
+    vertical-align: middle;
 }
 
-.downThumbIcon {
+.thumbContainer {
+    display: inline-flex;
+}
+
+.thumbIcon {
     border: 1px solid lightgray;
     height: 15px;
     width: 25px;
@@ -20,6 +21,7 @@
 
 .helpfulText {
     font-size: 0.85rem;
+    font-weight: 700;
 }
 
 .votes {

@@ -4,13 +4,17 @@ import { ThumbIcon } from '../../thumb-icon';
 
 const ReviewFooter = ({ helpful, notHelpful }) => (
     <footer className={styles.footer}>
-        <div className={styles.helpfulText}><strong>Was this review helpful to you?</strong></div>
+        <div className={styles.helpfulText}>Was this review helpful to you?</div>
         <div className={styles.votes}>
-            <div className={styles.upThumbIcon}>
-                <ThumbIcon />
-                <span className={styles.helpful}>{helpful}</span>
+            <div className={styles.thumbIcon}>
+                <div className={styles.thumbContainer}>
+                    <div className={styles.iconContainer}>
+                        <ThumbIcon />
+                    </div>
+                    <span className={styles.helpful}>{helpful}</span>
+                </div>
             </div>
-            <div className={styles.downThumbIcon}>
+            <div className={styles.thumbIcon}>
                 <ThumbIcon className={styles.thumbDown}/>
                 <span className={styles.notHelpful}>{notHelpful}</span>
             </div>
@@ -20,3 +24,10 @@ const ReviewFooter = ({ helpful, notHelpful }) => (
 );
 
 export default ReviewFooter;
+
+
+/*
+    <div>
+        
+    </div>
+*/
