@@ -1,6 +1,7 @@
 .title {
     display: flex;
-    justify-content: center;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .list {
@@ -9,4 +10,8 @@
     display: table;
     /* flex-direction: column;
     justify-content: center; */
+}
+
+.filterContainer {
+    float: right;
 }
