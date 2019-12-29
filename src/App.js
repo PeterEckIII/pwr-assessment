@@ -6,8 +6,12 @@ const App = () => {
     const [ reviews, setReviews ] = useState([]);
 
     const fetchReviews = async () => {
-        const result = await axios.get('/reviews');
-        setReviews(result.data.reviews);
+        try {
+            const result = await axios.get('/reviews');
+            setReviews(result.data.reviews);            
+        } catch (error) {
+            console.log(`Error: ${error}`)
+        }
     }
 
     useEffect(() => {    
