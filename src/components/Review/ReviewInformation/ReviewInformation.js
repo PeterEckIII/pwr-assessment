@@ -4,6 +4,7 @@ import { relativeTime } from '../../../relative-time';
 import ReviewBadge from '../ReviewBadge/ReviewBadge';
 
 const ReviewInformation = ({ location, nickname, created, badges }) => {
+    const formattedNickname = nickname.charAt(0).toUpperCase() + nickname.slice(1).toLowerCase();
     return (
         <aside className={ styles.information }>
             <div>
@@ -13,7 +14,7 @@ const ReviewInformation = ({ location, nickname, created, badges }) => {
             <div>
                 <span><strong>By:  </strong></span>
                 <span>
-                    { nickname }
+                    { formattedNickname }
                 </span>
             </div>
             <div>
