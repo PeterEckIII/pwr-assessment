@@ -1,28 +1,28 @@
-import React from 'react'
+import React from 'react';
 
 const Filter = ({ filter, handleFilterChange }) => (
     <div>
         <select
-            value={filter}
             name="filter"
             id="filter"
+            value={filter}
             onChange={handleFilterChange}
         >
             <option value="mostRecent">
                 Most Recent
-                </option>
+                    </option>
             <option value="oldest">
                 Oldest
-                </option>
+                    </option>
             <option value="mostHelpful">
                 Most Helpful
-                </option>
+                    </option>
             <option value="highestRating">
                 Highest Rating
-                </option>
+                    </option>
             <option value="lowestRating">
                 Lowest Rating
-                </option>
+                    </option>
         </select>
     </div>
 );
