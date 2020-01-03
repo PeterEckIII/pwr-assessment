@@ -1,5 +1,6 @@
 .section {
   grid-area: content;
+  width: 100%;
 }
 
 .review_comment {
@@ -7,6 +8,6 @@
   float: left;
   color: black;
   font-size: 0.9rem;
-  padding: 10px;
+  padding: 10px 0;
   word-wrap: break-word;
 }

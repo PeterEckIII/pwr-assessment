@@ -1,34 +1,41 @@
 .footer {
-    grid-area: footer;
-}
-
-.iconContainer {
-    display: inline-block;
-    vertical-align: middle;
+  grid-area: footer;
+  width: 100%;
+  margin-top: 10px;
 }
 
 .thumbContainer {
-    display: inline-flex;
+    border: 1px solid lightgray;
+    padding: 7px 7px;
+    cursor: pointer;
+    width: 50px;
+    margin-top: 10px;
 }
 
-.thumbIcon {
-    border: 1px solid lightgray;
-    height: 15px;
-    width: 25px;
-    padding: 5px 5px;
-    margin: 5px 5px;
+.upThumbIcon {
+  display: inline-block;
+  vertical-align: middle;
+  height: 18px;
+  width: 25px;
 }
 
 .helpfulText {
-    font-size: 0.85rem;
-    font-weight: 700;
+  font-weight: 700;
+  margin-top: 3px;
+}
+
+.voteText {
+  font-weight: 500;
 }
 
 .votes {
-    display: flex;
+  display: flex;
 }
 
-.thumbDown {
-    display: inline;
-    transform: rotateX(180deg);
+.downThumbIcon {
+  transform: scale(1,-1);
+  display: inline-block;
+  vertical-align: text-bottom;
+  height: 18px;
+  width: 25px;
 }
