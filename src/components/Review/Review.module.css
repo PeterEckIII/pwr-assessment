@@ -2,11 +2,19 @@
   margin: 10px 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: 
-  "header header header"
-  "content content aside"
-  "footer footer footer";
+  grid-template-areas:
+    "header header header"
+    "content content aside"
+    "footer footer footer";
   border-top: 1px solid lightgray;
   padding: 10px 10px;
   line-height: 1.5rem;
+}
+
+@media only screen and (max-width: 960px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
