@@ -1,70 +1,56 @@
-import React, { useState, useEffect } from 'react'
-import axios from 'axios';
+import React, { useState, useEffect } from 'react';
 import Review from '../Review/Review';
 import styles from './ReviewList.module.css';
 import Filter from '../Filter/Filter';
 
-const ReviewList = () => {
+const ReviewList = ({ fetchedReviews}) => {
     const [filter, setFilter] = useState('mostRecent')
-    const [reviews, setReviews] = useState([]);
-    const [filteredReviews, setFilteredReviews] = useState(reviews);
+    const [filteredReviews, setFilteredReviews] = useState(fetchedReviews);
 
     const handleFilterChange = (e) => {
         setFilter(e.target.value);
     }
 
-    const fetchReviews = async () => {
-        try {
-            const result = await axios.get('/reviews');
-            setReviews(result.data.reviews);
-        } catch (error) {
-            console.log(`Error: ${error}`)
-        }
-    }
-
-    
-
-    useEffect(() => {
-        fetchReviews()
-        
-        const filterReviews = (filter, reviews) => {
+    useEffect(() => {        
+        const filterReviews = (filter, reviewsToFilter) => {
+            let filteredResults;
             switch (filter) {
                 case 'mostRecent':
-                    setFilteredReviews(reviews
+                    filteredResults = reviewsToFilter
                         .map(review => review)
                         .sort((a, b) => b.details.created_date - a.details.created_date)
-                    )
+                    setFilteredReviews(filteredResults)
                     break;
                 case 'oldest':
-                    setFilteredReviews(reviews
+                    filteredResults = reviewsToFilter
                         .map(review => review)
                         .sort((a, b) => a.details.created_date - b.details.created_date)
-                    )
+                    setFilteredReviews(filteredResults)
                     break;
                 case 'mostHelpful':
-                    setFilteredReviews(reviews
+                    filteredResults = reviewsToFilter
                         .map(review => review)
                         .sort((a, b) => b.metrics.helpful_votes - a.metrics.helpful_votes)
-                    )
+                    setFilteredReviews(filteredResults)
                     break;
-                case 'highestRated':
-                    setFilteredReviews(reviews
+                case 'highestRating':
+                    filteredResults = reviewsToFilter
                         .map(review => review)
                         .sort((a, b) => b.metrics.rating - a.metrics.rating)
-                    )
+                    setFilteredReviews(filteredResults)
                     break;
-                case 'lowestRated':
-                    setFilteredReviews(reviews
+                case 'lowestRating':
+                    filteredResults = reviewsToFilter
                         .map(review => review)
                         .sort((a, b) => a.metrics.rating - b.metrics.rating)
-                    )
+                    setFilteredReviews(filteredResults)
                     break;
                 default:
-                    setReviews(filteredReviews)
+                    setFilteredReviews(reviewsToFilter)
             }
         }
-        filterReviews(filter, reviews);
-    }, [filter, reviews, filteredReviews])
+        filterReviews(filter, fetchedReviews)
+    }, [ fetchedReviews, filter ])
 
     return (
         <div>
@@ -78,7 +64,7 @@ const ReviewList = () => {
                 />
             </div>
             <ul className={styles.list}>
-                {reviews.map(review => {
+                {filteredReviews.map(review => {
                     return (
                         <Review
                             key={review.review_id}
