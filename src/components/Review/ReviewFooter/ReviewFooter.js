@@ -5,15 +5,28 @@ import { ThumbIcon } from '../../thumb-icon';
 const ReviewFooter = ({ helpful, notHelpful }) => {
     const [ helpfulVotes, setHelpfulVotes ] = useState(helpful)
     const [ unhelpfulVotes, setUnhelpfulVotes ] = useState(notHelpful);
+    const [ helpfulDisabled, setHelpfulDisabled ] = useState(false);
+    const [ notHelpfulDisabled, setNotHelpfulDisabled ] = useState(false);
+
+    const handleAddHelpfulVote = () => {
+        setHelpfulVotes(v => v + 1)
+        setHelpfulDisabled(true)
+    }
+
+    const handleAddUnhelpfulVote = () => {
+        setUnhelpfulVotes(v => v + 1)
+        setNotHelpfulDisabled(true)
+    }
 
     return (
         <footer className={styles.footer}>
             <div className={styles.helpfulText}>Was this review helpful to you?</div>
             <div className={styles.votes}>
                 
-                <div 
-                    className={styles.thumbContainer}
-                    onClick={() => setHelpfulVotes(v => v + 1)}
+                <button 
+                    className={styles.thumbButton}
+                    onClick={handleAddHelpfulVote}
+                    disabled={helpfulDisabled}
                 >
                     <div className={styles.upThumbIcon}>
                         <ThumbIcon />
@@ -22,18 +35,21 @@ const ReviewFooter = ({ helpful, notHelpful }) => {
                     <span className={styles.voteText}>
                         { helpfulVotes }
                     </span>
-                </div>
+                </button>
 
-                <div
-                    className={styles.thumbContainer}
-                    onClick={() => setUnhelpfulVotes(v => v + 1)}
+                <button
+                    className={styles.thumbButton}
+                    onClick={handleAddUnhelpfulVote}
+                    disabled={notHelpfulDisabled}
                 >
                     <div className={styles.downThumbIcon}>
                         <ThumbIcon />
                     </div>
                     &nbsp;
-                    <span className={styles.voteText}>{unhelpfulVotes}</span>
-                </div>
+                    <span className={styles.voteText}>
+                        {unhelpfulVotes}
+                    </span>
+                </button>
             </div>
         </footer>
     );

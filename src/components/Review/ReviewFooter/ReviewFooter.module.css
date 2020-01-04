@@ -4,12 +4,18 @@
   margin-top: 10px;
 }
 
-.thumbContainer {
+.thumbButton {
     border: 1px solid lightgray;
     padding: 7px 7px;
     cursor: pointer;
     width: 50px;
     margin-top: 10px;
+}
+
+.thumbButton:disabled {
+  background-color: #5d687c;
+  color: white;
+  width: inherit;
 }
 
 .upThumbIcon {
