@@ -5,7 +5,7 @@ import Filter from '../Filter/Filter';
 const Header = ({ filter, handleFilterChange }) => (
     <div className={styles.headerContainer}>
         <div className={styles.title}>
-            <div>
+            <div className={styles.headerText}>
                 <strong>Review Display</strong>
             </div>
         </div>
