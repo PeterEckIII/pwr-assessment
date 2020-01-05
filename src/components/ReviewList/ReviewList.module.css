@@ -1,17 +1,14 @@
-.title {
-    display: flex;
-    display: inline-block;
-    vertical-align: middle;
+.reviewListContainer {
+    width: 70%;
+    border: 1px solid lightgray;
+    margin: 0 auto;
 }
 
 .list {
-    width: 70%;
-    margin: 0 auto;
-    display: table;
-    /* flex-direction: column;
-    justify-content: center; */
+    padding: 0;
+    width: 100%;
 }
 
-.filterContainer {
-    float: right;
+.title {
+    display: inline;
 }
