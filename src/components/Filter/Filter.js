@@ -1,7 +1,8 @@
 import React from 'react';
+import styles from './Filter.module.css';
 
 const Filter = ({ filter, handleFilterChange }) => (
-    <div>
+    <div className={styles.filterContainer}>
         <select
             name="filter"
             id="filter"
