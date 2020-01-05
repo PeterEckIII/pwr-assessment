@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import styles from './App.module.css';
 import ReviewList from './components/ReviewList/ReviewList';
 import Header from './components/Header/Header';
 
@@ -64,7 +65,7 @@ const App = () => {
     }, [filter, fetchedReviews])
 
     return (
-        <div>
+        <div className={styles.App}>
             <Header
                 filter={filter}
                 handleFilterChange={handleFilterChange}
