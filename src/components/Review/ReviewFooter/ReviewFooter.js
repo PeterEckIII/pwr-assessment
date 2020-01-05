@@ -4,20 +4,24 @@ import { ThumbIcon } from '../../thumb-icon';
 
 const ReviewFooter = ({ helpful, notHelpful }) => {
     const [ helpfulVotes, setHelpfulVotes ] = useState(helpful)
-    const [unhelpfulVotes, setUnhelpfulVotes] = useState(notHelpful);
+    const [ unhelpfulVotes, setUnhelpfulVotes ] = useState(notHelpful);
     const [ helpfulDisabled, setHelpfulDisabled ] = useState(false);
     const [ unHelpfulDisabled, setUnHelpfulDisabled ] = useState(false);
+    const [ selectedHelpful, setSelectedHelpful ] = useState(false)
+    const [ selectedUnhelpful, setSelectedUnhelpful] = useState(false)
 
     const handleAddHelpfulVote = () => {
         setHelpfulVotes(v => v + 1)
         setHelpfulDisabled(true)
         setUnHelpfulDisabled(true)
+        setSelectedHelpful(true)
     }
 
     const handleAddUnhelpfulVote = () => {
         setUnhelpfulVotes(v => v + 1)
         setUnHelpfulDisabled(true)
         setHelpfulDisabled(true)
+        setSelectedUnhelpful(true)
     }
 
     return (
@@ -26,7 +30,7 @@ const ReviewFooter = ({ helpful, notHelpful }) => {
             <div className={styles.votes}>
                 
                 <button
-                    className={styles.thumbButton}
+                    className={selectedHelpful ? styles.thumbButtonDisabled : styles.thumbButton}
                     onClick={handleAddHelpfulVote}
                     disabled={helpfulDisabled}
                 >
@@ -40,7 +44,7 @@ const ReviewFooter = ({ helpful, notHelpful }) => {
                 </button>
 
                 <button
-                    className={styles.thumbButton}
+                    className={selectedUnhelpful ? styles.thumbButtonDisabled : styles.thumbButton}
                     onClick={handleAddUnhelpfulVote}
                     disabled={unHelpfulDisabled}
                 >

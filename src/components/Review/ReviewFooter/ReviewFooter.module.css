@@ -9,19 +9,28 @@
 }
 
 .thumbButton {
-    border: 1px solid lightgray;
-    padding: 7px 7px;
-    cursor: pointer;
-    width: 60px;
-    margin-top: 10px;
-    outline: none;
+  border: 1px solid lightgray;
+  padding: 7px 7px;
+  cursor: pointer;
+  width: 60px;
+  margin-top: 10px;
+  outline: none;
 }
 
-.thumbButton:disabled {
+.thumbButtonDisabled {
   background-color: #5d687c;
   color: white;
   width: 60px;
   cursor: not-allowed;
+  border: 1px solid lightgray;
+  padding: 7px 7px;
+  margin-top: 10px;
+  outline: none;
+}
+
+.votedAgainst {
+  cursor: not-allowed;
+  width: 60px;
 }
 
 .upThumbIcon {
@@ -45,7 +54,7 @@
 }
 
 .downThumbIcon {
-  transform: scale(1,-1);
+  transform: scale(1, -1);
   display: inline-block;
   vertical-align: text-bottom;
   height: 18px;
