@@ -2,20 +2,22 @@ import React, { useState } from 'react';
 import styles from './ReviewFooter.module.css';
 import { ThumbIcon } from '../../thumb-icon';
 
-const ReviewFooter = ({ helpful, notHelpful }) => {
+const ReviewFooter = ({ helpful, unHelpful }) => {
     const [ helpfulVotes, setHelpfulVotes ] = useState(helpful)
-    const [ unhelpfulVotes, setUnhelpfulVotes ] = useState(notHelpful);
+    const [ unhelpfulVotes, setUnhelpfulVotes ] = useState(unHelpful);
     const [ helpfulDisabled, setHelpfulDisabled ] = useState(false);
-    const [ notHelpfulDisabled, setNotHelpfulDisabled ] = useState(false);
+    const [ unHelpfulDisabled, setUnHelpfulDisabled ] = useState(false);
 
     const handleAddHelpfulVote = () => {
         setHelpfulVotes(v => v + 1)
         setHelpfulDisabled(true)
+        setUnHelpfulDisabled(true)
     }
 
     const handleAddUnhelpfulVote = () => {
         setUnhelpfulVotes(v => v + 1)
-        setNotHelpfulDisabled(true)
+        setUnHelpfulDisabled(true)
+        setHelpfulDisabled(true)
     }
 
     return (
@@ -23,7 +25,7 @@ const ReviewFooter = ({ helpful, notHelpful }) => {
             <div className={styles.helpfulText}>Was this review helpful to you?</div>
             <div className={styles.votes}>
                 
-                <button 
+                <button
                     className={styles.thumbButton}
                     onClick={handleAddHelpfulVote}
                     disabled={helpfulDisabled}
@@ -40,14 +42,14 @@ const ReviewFooter = ({ helpful, notHelpful }) => {
                 <button
                     className={styles.thumbButton}
                     onClick={handleAddUnhelpfulVote}
-                    disabled={notHelpfulDisabled}
+                    disabled={unHelpfulDisabled}
                 >
                     <div className={styles.downThumbIcon}>
                         <ThumbIcon />
                     </div>
                     &nbsp;
                     <span className={styles.voteText}>
-                        {unhelpfulVotes}
+                        { unhelpfulVotes }
                     </span>
                 </button>
             </div>

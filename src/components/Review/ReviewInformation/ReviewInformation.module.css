@@ -1,6 +1,6 @@
 .aside {
   grid-area: aside;
-  float: right;
+  /* float: right; */
 }
 
 .information {
