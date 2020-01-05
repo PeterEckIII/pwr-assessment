@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import styles from './ReviewFooter.module.css';
 import { ThumbIcon } from '../../thumb-icon';
 
-const ReviewFooter = ({ helpful, unHelpful }) => {
+const ReviewFooter = ({ helpful, notHelpful }) => {
     const [ helpfulVotes, setHelpfulVotes ] = useState(helpful)
-    const [ unhelpfulVotes, setUnhelpfulVotes ] = useState(unHelpful);
+    const [unhelpfulVotes, setUnhelpfulVotes] = useState(notHelpful);
     const [ helpfulDisabled, setHelpfulDisabled ] = useState(false);
     const [ unHelpfulDisabled, setUnHelpfulDisabled ] = useState(false);
 
