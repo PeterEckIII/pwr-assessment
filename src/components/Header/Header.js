@@ -10,10 +10,15 @@ const Header = ({ filter, handleFilterChange }) => (
             </div>
         </div>
         <div className={styles.filterContainer}>
-            <Filter
-                filter={filter}
-                handleFilterChange={handleFilterChange}
-            />
+            <span className={styles.filterText}>
+                Sort By: 
+            </span>
+            <div className={styles.filter}>
+                <Filter
+                    filter={filter}
+                    handleFilterChange={handleFilterChange}
+                />
+            </div>
         </div>
     </div>
 )

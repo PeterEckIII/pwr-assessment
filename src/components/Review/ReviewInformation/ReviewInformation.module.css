@@ -1,8 +1,14 @@
 .aside {
   grid-area: aside;
-  /* float: right; */
+
 }
 
 .information {
   font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 960px) {
+  .information {
+    color: hsla(0, 0%, 30%, 1);
+  }
 }

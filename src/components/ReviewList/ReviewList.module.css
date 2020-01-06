@@ -1,12 +1,19 @@
 .reviewListContainer {
     width: 70%;
-    border: 1px solid lightgray;
+    border: 0.25px solid #e0e0e0;
     margin: 0 auto;
     background-color: white;
 }
 
+@media only screen and (max-width: 737px) {
+    .reviewListContainer {
+        width: 100%;
+    }
+}
+
 .list {
     padding: 0;
+    margin: 0;
     width: 100%;
 }
 

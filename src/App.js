@@ -65,12 +65,14 @@ const App = () => {
     }, [filter, fetchedReviews])
 
     return (
-        <div className={styles.App}>
-            <Header
-                filter={filter}
-                handleFilterChange={handleFilterChange}
-            />
-            <ReviewList filteredReviews={filteredReviews} />
+        <div className={styles.appContainer}>
+            <div className={styles.reviewContainer}>
+                <Header
+                    filter={filter}
+                    handleFilterChange={handleFilterChange}
+                />
+                <ReviewList filteredReviews={filteredReviews} />
+            </div>
         </div>
     )
 }

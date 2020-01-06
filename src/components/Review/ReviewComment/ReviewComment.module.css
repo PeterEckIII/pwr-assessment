@@ -11,3 +11,9 @@
   padding: 10px 0;
   word-wrap: break-word;
 }
+
+@media only screen and (max-width: 960px) {
+  .review_comment {
+    width: 80%;
+  }
+}

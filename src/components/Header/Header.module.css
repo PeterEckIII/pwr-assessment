@@ -1,5 +1,5 @@
 .filterContainer {
-    float: right;
+    display: flex;
 }
 
 .headerContainer {
@@ -10,8 +10,25 @@
     justify-content: space-between;
     padding-top: 12px;
     padding-bottom: 12px;
+    border-right: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+}
+
+@media only screen and (max-width: 737px) {
+    .headerContainer {
+        width: 100%;
+    }
 }
 
 .headerText {
     padding-left: 15px;
+}
+
+.filter {
+    margin-left: 5px;
+}
+
+.filterText {
+    font-size: 0.75rem;
+    margin-top: 3px;
 }

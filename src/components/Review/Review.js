@@ -6,25 +6,28 @@ import ReviewComment from './ReviewComment/ReviewComment';
 import ReviewFooter from './ReviewFooter/ReviewFooter';
 
 const Review = ({ review }) => (
-    <article className={ styles.container } >
-        <ReviewHeader
-            rating={ review.metrics.rating }
-            headline={ review.details.headline }
-        />
-        <ReviewComment
-            comment={ review.details.comments }
-        />
-        <ReviewInformation
-            location={ review.details.location }
-            nickname={ review.details.nickname }
-            created={ review.details.created_date }
-            badges={review.badges}
-        />
-        <ReviewFooter
-            helpful={review.metrics.helpful_votes}
-            notHelpful={review.metrics.not_helpful_votes}
-        />
-    </article>
+    <div>
+        <div className={styles.line}></div>
+        <article className={styles.container} >
+            <ReviewHeader
+                rating={review.metrics.rating}
+                headline={review.details.headline}
+            />
+            <ReviewInformation
+                location={review.details.location}
+                nickname={review.details.nickname}
+                created={review.details.created_date}
+                badges={review.badges}
+            />
+            <ReviewComment
+                comment={review.details.comments}
+            />
+            <ReviewFooter
+                helpful={review.metrics.helpful_votes}
+                notHelpful={review.metrics.not_helpful_votes}
+            />
+        </article>
+    </div>
 )
 
 export default Review;
